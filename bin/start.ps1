@@ -1,7 +1,7 @@
 ﻿Add-Type -Assembly System.Windows.Forms;
 
 # ゲーム起動
-Start-Process "dmmgameplayer://umamusume/cl/general/umamusume";
+Start-Process "dmmgameplayer://priconner/cl/general/priconner";
 $c = 0;
 do {
     # 60回プロセスを取得できなかったら起動失敗ということにする
@@ -10,11 +10,11 @@ do {
         exit;
     }
     Start-Sleep -s 2;
-    Get-Process -Name umamusume;
+    Get-Process -Name PrincessConnectReDive;
 } while (!$?);
 
 do {
     # プロセスが取得できなくなったら終了したと見なす
     Start-Sleep -s 5;
-    Get-Process -Name umamusume;
+    Get-Process -Name PrincessConnectReDive;
 } while ($?);
